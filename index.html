@@ -3,39 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sertão Livre — A voz do sertão</title>
+<title>Sertão Livre — Compromisso com a Verdade</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --navy:#1E3A8A;
-  --gold:#F59E0B;
-  --white:#ffffff;
-  --light:#F8F9FA;
-  --gray:#6B7280;
-  --dark:#1F2937;
-  --border:#E5E7EB;
-  --red:#DC2626;
-  --green:#16A34A;
-  --orange:#EA580C;
-  --purple:#7C3AED;
-}
+:root{--navy:#1E3A8A;--gold:#F59E0B;--white:#ffffff;--light:#F8F9FA;--gray:#6B7280;--dark:#1F2937;--border:#E5E7EB;--red:#DC2626;--green:#16A34A;--orange:#EA580C;--purple:#7C3AED;}
 body{font-family:'Open Sans',sans-serif;background:#F1F3F5;color:var(--dark);font-size:15px;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;display:block;}
-
-/* TOP BAR */
 .topbar{background:var(--navy);color:#fff;font-size:12px;padding:6px 0;}
 .topbar-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;}
 .topbar-left{display:flex;align-items:center;gap:16px;}
 .topbar-left span{opacity:.85;}
 .weather{display:flex;align-items:center;gap:5px;}
 .socials{display:flex;align-items:center;gap:10px;}
-.socials a{color:#fff;opacity:.8;font-size:14px;transition:.2s;}
+.socials a{color:#fff;opacity:.8;transition:.2s;}
 .socials a:hover{opacity:1;}
 .socials-label{margin-right:4px;opacity:.7;}
-
-/* HEADER */
 header{background:#fff;border-bottom:3px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.07);position:sticky;top:0;z-index:100;}
 .header-main{max-width:1280px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;}
 .logo{display:flex;flex-direction:column;}
@@ -44,59 +28,43 @@ header{background:#fff;border-bottom:3px solid var(--gold);box-shadow:0 2px 8px 
 .logo-tag{font-size:10px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
 .search-box{display:flex;align-items:center;border:1.5px solid var(--border);border-radius:25px;padding:6px 14px;gap:8px;background:#F8F9FA;}
 .search-box input{border:none;background:none;outline:none;font-size:13px;width:220px;color:var(--dark);}
-.search-box svg{color:var(--gray);flex-shrink:0;}
-
-/* NAV */
 nav{background:#fff;border-top:1px solid var(--border);}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;gap:0;}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;gap:0;overflow-x:auto;}
 .nav-inner a{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--dark);padding:13px 16px;display:block;border-bottom:3px solid transparent;transition:.2s;white-space:nowrap;}
-.nav-inner a:hover{color:var(--navy);border-bottom-color:var(--gold);}
-.nav-inner a.active{color:var(--navy);border-bottom-color:var(--gold);}
-
-/* TICKER */
+.nav-inner a:hover,.nav-inner a.active{color:var(--navy);border-bottom-color:var(--gold);}
 .ticker{background:var(--navy);color:#fff;padding:8px 0;overflow:hidden;}
 .ticker-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px;}
 .ao-vivo{background:var(--red);font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 8px;border-radius:3px;white-space:nowrap;animation:pulse 1.5s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.6;}}
-.ticker-text{font-size:12px;opacity:.9;white-space:nowrap;animation:scroll 30s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.ticker-wrap{overflow:hidden;flex:1;}
+.ticker-text{font-size:12px;opacity:.9;white-space:nowrap;display:inline-block;animation:scroll 35s linear infinite;}
+@keyframes scroll{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
 .radio-btn{margin-left:auto;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:11px;padding:4px 12px;border-radius:20px;white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:6px;}
-
-/* MAIN LAYOUT */
 .container{max-width:1280px;margin:0 auto;padding:0 20px;}
 .main-grid{display:grid;grid-template-columns:1fr 280px;gap:24px;margin-top:24px;}
-
-/* HERO */
-.hero-section{position:relative;border-radius:10px;overflow:hidden;cursor:pointer;}
+.hero-section{position:relative;border-radius:10px;overflow:hidden;cursor:pointer;background:#ddd;}
 .hero-img{width:100%;height:420px;object-fit:cover;display:block;}
-.hero-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 60%,transparent 100%);padding:28px;}
+.hero-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,transparent 100%);padding:28px;}
 .hero-badge{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-bottom:12px;}
-.hero-title{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:800;color:#fff;line-height:1.3;margin-bottom:10px;}
-.hero-excerpt{font-size:14px;color:rgba(255,255,255,.85);line-height:1.5;margin-bottom:12px;}
+.hero-title{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800;color:#fff;line-height:1.3;margin-bottom:10px;}
 .hero-meta{font-size:12px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:6px;}
-
-/* MINI CARDS ROW */
 .mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px;}
 .mini-card{background:#fff;border-radius:8px;overflow:hidden;cursor:pointer;transition:.2s;border:1px solid var(--border);}
 .mini-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.1);}
-.mini-card-img{position:relative;height:160px;overflow:hidden;}
+.mini-card-img{position:relative;height:160px;overflow:hidden;background:#ddd;}
 .mini-card-img img{width:100%;height:100%;object-fit:cover;transition:.3s;}
 .mini-card:hover .mini-card-img img{transform:scale(1.04);}
 .mini-badge{position:absolute;bottom:8px;left:8px;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:3px;color:#fff;}
 .badge-esportes{background:var(--green);}
 .badge-politica{background:var(--red);}
-.badge-regiao{background:var(--orange);}
-.badge-policia{background:#1D4ED8;}
+.badge-regiao,.badge-umburanas{background:var(--orange);}
+.badge-policia,.badge-policia{background:#1D4ED8;}
 .badge-brasil{background:#059669;}
-.badge-jacobina{background:var(--purple);}
-.badge-umburanas{background:var(--orange);}
 .badge-ourolandia{background:var(--purple);}
-.badge-ultimas{background:var(--red);}
+.badge-noticias,.badge-default{background:var(--navy);}
 .mini-card-body{padding:12px;}
 .mini-card-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;line-height:1.4;color:var(--dark);margin-bottom:6px;}
-.mini-card-date{font-size:11px;color:var(--gray);display:flex;align-items:center;gap:4px;}
-
-/* SIDEBAR */
+.mini-card-date{font-size:11px;color:var(--gray);}
 .sidebar{display:flex;flex-direction:column;gap:20px;}
 .sidebar-box{background:#fff;border-radius:8px;border:1px solid var(--border);overflow:hidden;}
 .sidebar-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);padding:14px 16px;border-bottom:2px solid var(--gold);background:#F8F9FA;}
@@ -105,50 +73,24 @@ nav{background:#fff;border-top:1px solid var(--border);}
 .mais-lidas-item:last-child{border-bottom:none;}
 .mais-lidas-item:hover{background:#F8F9FA;}
 .mais-lidas-num{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--gold);line-height:1;flex-shrink:0;width:28px;}
-.mais-lidas-content{}
 .mais-lidas-title{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;line-height:1.4;color:var(--dark);margin-bottom:4px;}
 .mais-lidas-date{font-size:11px;color:var(--gray);}
 .ver-mais-btn{display:block;text-align:center;padding:12px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--navy);border-top:1px solid var(--border);transition:.2s;}
 .ver-mais-btn:hover{background:var(--navy);color:#fff;}
-
-/* ULTIMAS SIDEBAR */
-.ultimas-list{padding:8px 0;}
-.ultimas-item{display:flex;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s;}
-.ultimas-item:last-child{border-bottom:none;}
-.ultimas-item:hover{background:#F8F9FA;}
-.ultimas-thumb{width:70px;height:55px;object-fit:cover;border-radius:5px;flex-shrink:0;}
-.ultimas-content{}
-.ultimas-cat{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px;}
-.ultimas-cat.pol{color:var(--red);}
-.ultimas-cat.bra{color:var(--green);}
-.ultimas-cat.jac{color:var(--purple);}
-.ultimas-cat.umb{color:var(--orange);}
-.ultimas-title{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;line-height:1.4;color:var(--dark);margin-bottom:3px;}
-.ultimas-date{font-size:10px;color:var(--gray);}
-.ver-todas-link{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--navy);border-top:1px solid var(--border);transition:.2s;}
-.ver-todas-link:hover{background:var(--navy);color:#fff;}
-
-/* SECTION DIVIDER */
 .section-divider{height:1px;background:var(--border);margin:28px 0;}
-
-/* AD BANNER */
 .ad-banner{background:#F8F9FA;border:2px dashed #D1D5DB;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--gray);font-size:12px;font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:.5px;}
 .ad-banner-h{height:90px;}
 .ad-banner-v{height:300px;}
-.ad-banner svg{opacity:.4;}
 .ad-label{font-size:11px;opacity:.6;}
-
-/* FEED SECTION */
 .feed-section{margin-top:24px;}
 .two-col{display:grid;grid-template-columns:1fr 280px;gap:24px;}
 .feed-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:3px solid var(--gold);}
 .feed-header-title{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);}
-.feed-list{display:flex;flex-direction:column;gap:0;}
+.feed-list{display:flex;flex-direction:column;}
 .feed-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s;}
 .feed-item:hover{background:#F8F9FA;margin:0 -12px;padding:16px 12px;}
 .feed-item:last-child{border-bottom:none;}
-.feed-thumb{width:200px;height:130px;object-fit:cover;border-radius:6px;flex-shrink:0;position:relative;}
-.feed-thumb-wrap{position:relative;flex-shrink:0;}
+.feed-thumb-wrap{position:relative;flex-shrink:0;background:#ddd;border-radius:6px;overflow:hidden;}
 .feed-thumb-wrap img{width:200px;height:130px;object-fit:cover;border-radius:6px;}
 .feed-badge{position:absolute;bottom:8px;left:8px;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:3px;color:#fff;}
 .feed-content{flex:1;}
@@ -159,8 +101,6 @@ nav{background:#fff;border-top:1px solid var(--border);}
 .feed-time{font-size:11px;color:var(--gray);display:flex;align-items:center;gap:4px;}
 .ver-mais-noticias{display:block;background:var(--navy);color:#fff;text-align:center;padding:14px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;margin-top:20px;transition:.2s;}
 .ver-mais-noticias:hover{background:#162d6e;}
-
-/* CATEGORY SECTIONS */
 .cat-section{margin-top:28px;}
 .cat-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--border);}
 .cat-header-left{display:flex;align-items:center;gap:10px;}
@@ -176,18 +116,16 @@ nav{background:#fff;border-top:1px solid var(--border);}
 .cat-title.umburanas{color:var(--orange);}
 .cat-title.ourolandia{color:var(--purple);}
 .cat-link{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:4px;}
-.cat-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.cat-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
 .cat-card{background:#fff;border-radius:8px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:.2s;}
 .cat-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.1);}
-.cat-card-img{position:relative;height:160px;overflow:hidden;}
+.cat-card-img{position:relative;height:160px;overflow:hidden;background:#ddd;}
 .cat-card-img img{width:100%;height:100%;object-fit:cover;transition:.3s;}
 .cat-card:hover .cat-card-img img{transform:scale(1.05);}
 .cat-card-body{padding:12px;}
-.cat-card-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;line-height:1.4;margin-bottom:5px;}
-.cat-card-excerpt{font-size:12px;color:var(--gray);line-height:1.4;margin-bottom:8px;}
+.cat-card-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;line-height:1.4;margin-bottom:8px;}
 .cat-card-date{font-size:11px;color:var(--gray);display:flex;align-items:center;gap:4px;}
-
-/* FOOTER */
+.cats-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;}
 footer{background:var(--navy);color:#fff;margin-top:40px;padding:40px 0 0;}
 .footer-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:32px;}
 .footer-logo-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;margin-bottom:4px;}
@@ -202,78 +140,64 @@ footer{background:var(--navy);color:#fff;margin-top:40px;padding:40px 0 0;}
 .footer-col ul li{margin-bottom:9px;}
 .footer-col ul li a{font-size:13px;opacity:.7;transition:.2s;}
 .footer-col ul li a:hover{opacity:1;color:var(--gold);}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding:16px 20px;text-align:center;font-size:12px;opacity:.5;max-width:1280px;margin-left:auto;margin-right:auto;}
-
-/* UTILS */
-.clock-icon{display:inline-flex;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding:16px 20px;text-align:center;font-size:12px;opacity:.5;}
+.loading{text-align:center;padding:40px;color:var(--gray);font-family:'Montserrat',sans-serif;font-size:14px;}
+.skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:6px;}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-inner">
     <div class="topbar-left">
-      <span>Terça-feira, 26 de maio de 2026</span>
+      <span id="data-hoje"></span>
       <div class="weather">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <span>Ourolândia — 28°C</span>
+        <span>Ourolândia</span>
       </div>
     </div>
     <div class="socials">
       <span class="socials-label">Siga-nos:</span>
-      <a href="#" title="Facebook">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-      </a>
-      <a href="#" title="Instagram">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      </a>
-      <a href="#" title="X">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg>
-      </a>
-      <a href="#" title="YouTube">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
-      </a>
+      <a href="https://facebook.com/tvsertaolivre" target="_blank"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://instagram.com/tvsertaolivre" target="_blank"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="#"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg></a>
+      <a href="#"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
     </div>
   </div>
 </div>
 
-<!-- HEADER -->
 <header>
   <div class="header-main">
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       <div class="logo-name">Sertão <span>Livre</span></div>
       <div class="logo-tag">Compromisso com a Verdade</div>
     </a>
     <div class="search-box">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" placeholder="Buscar notícias...">
+      <input type="text" placeholder="Buscar notícias..." id="search-input">
     </div>
   </div>
   <nav>
     <div class="nav-inner">
-      <a href="#" class="active">🏠 Início</a>
-      <a href="#">Ourolândia</a>
-      <a href="#">Umburanas</a>
-      <a href="#">Política</a>
-      <a href="#">Esportes</a>
-      <a href="#">Brasil</a>
-      <a href="#">Polícia</a>
-      <a href="#">Saúde</a>
+      <a href="index.html" class="active">🏠 Início</a>
+      <a href="categoria.html?slug=ourolandia&nome=Ourolândia">Ourolândia</a>
+      <a href="categoria.html?slug=umburanas&nome=Umburanas">Umburanas</a>
+      <a href="categoria.html?slug=politica&nome=Política">Política</a>
+      <a href="categoria.html?slug=esporte&nome=Esportes">Esportes</a>
+      <a href="categoria.html?slug=brasil&nome=Brasil">Brasil</a>
+      <a href="categoria.html?slug=policia&nome=Polícia">Polícia</a>
+      <a href="categoria.html?slug=saude&nome=Saúde">Saúde</a>
       <a href="#">Publicidade</a>
-      <a href="#">Mais ▾</a>
     </div>
   </nav>
 </header>
 
-<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-inner">
     <span class="ao-vivo">AO VIVO</span>
-    <div style="overflow:hidden;flex:1;">
-      <div class="ticker-text">
-        🔴 Fluminense de Alazão é campeão da Copa 13 de Junho após disputa nos pênaltis &nbsp;&nbsp;•&nbsp;&nbsp; 🚨 Polícia Civil prende suspeito de homicídio em Capim Grosso &nbsp;&nbsp;•&nbsp;&nbsp; 📢 Prefeitura de Umburanas anuncia concurso com 120 vagas &nbsp;&nbsp;•&nbsp;&nbsp; ⚽ Atlético de Casa Nova enfrenta América neste domingo &nbsp;&nbsp;•&nbsp;&nbsp; 🔴 Fluminense de Alazão é campeão da Copa 13 de Junho após disputa nos pênaltis &nbsp;&nbsp;•&nbsp;&nbsp; 🚨 Polícia Civil prende suspeito de homicídio em Capim Grosso
-      </div>
+    <div class="ticker-wrap">
+      <div class="ticker-text" id="ticker-text">Carregando notícias...</div>
     </div>
     <button class="radio-btn">
       <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
@@ -282,400 +206,103 @@ footer{background:var(--navy);color:#fff;margin-top:40px;padding:40px 0 0;}
   </div>
 </div>
 
-<!-- HERO + MAIS LIDAS + ÚLTIMAS -->
 <div class="container">
   <div class="main-grid">
     <div>
-      <!-- HERO -->
-      <div class="hero-section">
-        <img class="hero-img" src="https://picsum.photos/seed/sertao1/900/420" alt="Notícia principal">
-        <div class="hero-overlay">
-          <span class="hero-badge">Últimas Notícias</span>
-          <h1 class="hero-title">Fluminense de Alazão é campeão da Copa 13 de Junho após disputa emocionante nos pênaltis</h1>
-          <p class="hero-excerpt">Marcão defendeu o pênalti decisivo e garantiu o título histórico para o Tricolor no Estádio Nivaldo Mário Nunes.</p>
-          <div class="hero-meta">
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            26 de maio de 2026 às 14:30
-          </div>
-        </div>
+      <div class="hero-section" id="hero-section">
+        <div class="loading">Carregando notícia principal...</div>
       </div>
-
-      <!-- MINI CARDS -->
-      <div class="mini-cards">
-        <a href="#" class="mini-card">
-          <div class="mini-card-img">
-            <img src="https://picsum.photos/seed/pol1/400/200" alt="">
-            <span class="mini-badge badge-politica">Política</span>
-          </div>
-          <div class="mini-card-body">
-            <div class="mini-card-title">Câmara de Jacobina aprova LDO 2027 com foco em transparência</div>
-            <div class="mini-card-date">
-              <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              26 mai 2026 às 20:55
-            </div>
-          </div>
-        </a>
-        <a href="#" class="mini-card">
-          <div class="mini-card-img">
-            <img src="https://picsum.photos/seed/esp1/400/200" alt="">
-            <span class="mini-badge badge-esportes">Esportes</span>
-          </div>
-          <div class="mini-card-body">
-            <div class="mini-card-title">Atlético de Casa Nova e América decidem vaga na grande final</div>
-            <div class="mini-card-date">
-              <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              26 mai 2026 às 11:45
-            </div>
-          </div>
-        </a>
-        <a href="#" class="mini-card">
-          <div class="mini-card-img">
-            <img src="https://picsum.photos/seed/reg1/400/200" alt="">
-            <span class="mini-badge badge-regiao">Região</span>
-          </div>
-          <div class="mini-card-body">
-            <div class="mini-card-title">Prefeitura de Umburanas anuncia concurso público com 120 vagas</div>
-            <div class="mini-card-date">
-              <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              26 mai 2026 às 09:10
-            </div>
-          </div>
-        </a>
+      <div class="mini-cards" id="mini-cards">
+        <div class="loading">Carregando...</div>
       </div>
     </div>
-
-    <!-- SIDEBAR -->
     <div class="sidebar">
       <div class="sidebar-box">
         <div class="sidebar-title">Mais Lidas</div>
-        <div class="mais-lidas-list">
-          <a href="#" class="mais-lidas-item">
-            <div class="mais-lidas-num">1</div>
-            <div class="mais-lidas-content">
-              <div class="mais-lidas-title">Fluminense de Alazão vence nos pênaltis e vai à final da Copa 13 de Junho</div>
-              <div class="mais-lidas-date">26 de maio às 14:30</div>
-            </div>
-          </a>
-          <a href="#" class="mais-lidas-item">
-            <div class="mais-lidas-num">2</div>
-            <div class="mais-lidas-content">
-              <div class="mais-lidas-title">Polícia Civil prende suspeito de homicídio com drogas em Capim Grosso</div>
-              <div class="mais-lidas-date">26 de maio às 09:35</div>
-            </div>
-          </a>
-          <a href="#" class="mais-lidas-item">
-            <div class="mais-lidas-num">3</div>
-            <div class="mais-lidas-content">
-              <div class="mais-lidas-title">INSS inicia pagamento da 2ª parcela antecipada do 13º salário</div>
-              <div class="mais-lidas-date">25 de maio às 12:09</div>
-            </div>
-          </a>
-          <a href="#" class="mais-lidas-item">
-            <div class="mais-lidas-num">4</div>
-            <div class="mais-lidas-content">
-              <div class="mais-lidas-title">Oito pessoas morrem em acidente entre ônibus e carreta em rodovia</div>
-              <div class="mais-lidas-date">25 de maio às 13:35</div>
-            </div>
-          </a>
-          <a href="#" class="mais-lidas-item">
-            <div class="mais-lidas-num">5</div>
-            <div class="mais-lidas-content">
-              <div class="mais-lidas-title">Comitiva de Ourolândia marca presença na Feira Agropecuária de Morro do Chapéu</div>
-              <div class="mais-lidas-date">24 de maio às 16:42</div>
-            </div>
-          </a>
+        <div class="mais-lidas-list" id="mais-lidas">
+          <div class="loading">Carregando...</div>
         </div>
         <a href="#" class="ver-mais-btn">Ver Mais Lidas →</a>
       </div>
-
-
     </div>
   </div>
 
-  <!-- ===== PARTE 2: CATEGORIAS ===== -->
-
-  <!-- LINHA 1: OUROLÂNDIA + UMBURANAS -->
   <div class="section-divider"></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;">
 
-    <!-- OUROLÂNDIA -->
+  <!-- CATEGORIAS -->
+  <div class="cats-row">
     <div class="cat-section" style="margin-top:0;">
       <div class="cat-header">
         <div class="cat-header-left">
-          <div class="cat-icon ourolandia">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
+          <div class="cat-icon ourolandia"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <span class="cat-title ourolandia">Ourolândia</span>
         </div>
-        <a href="#" class="cat-link">Ver tudo →</a>
+        <a href="categoria.html?slug=ourolandia&nome=Ourolândia" class="cat-link">Ver tudo →</a>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-        <a href="#" class="cat-card">
-          <div class="cat-card-img">
-            <img src="https://picsum.photos/seed/ou1/400/220" alt="">
-            <span class="mini-badge badge-ourolandia" style="position:absolute;bottom:8px;left:8px;">Ourolândia</span>
-          </div>
-          <div class="cat-card-body">
-            <div class="cat-card-title">Ourolândia celebra 63 anos de emancipação com missa e desfile cívico</div>
-            <div class="cat-card-date"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>26 mai às 20:20</div>
-          </div>
-        </a>
-        <a href="#" class="cat-card">
-          <div class="cat-card-img">
-            <img src="https://picsum.photos/seed/ou2/400/220" alt="">
-            <span class="mini-badge badge-ourolandia" style="position:absolute;bottom:8px;left:8px;">Ourolândia</span>
-          </div>
-          <div class="cat-card-body">
-            <div class="cat-card-title">PM prende suspeito de tráfico de drogas no bairro Alto do Cruzeiro</div>
-            <div class="cat-card-date"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>26 mai às 16:45</div>
-          </div>
-        </a>
-      </div>
+      <div class="cat-cards" id="cat-ourolandia"><div class="loading">Carregando...</div></div>
     </div>
-
-    <!-- UMBURANAS -->
     <div class="cat-section" style="margin-top:0;">
       <div class="cat-header">
         <div class="cat-header-left">
-          <div class="cat-icon umburanas">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
+          <div class="cat-icon umburanas"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <span class="cat-title umburanas">Umburanas</span>
         </div>
-        <a href="#" class="cat-link">Ver tudo →</a>
+        <a href="categoria.html?slug=umburanas&nome=Umburanas" class="cat-link">Ver tudo →</a>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-        <a href="#" class="cat-card">
-          <div class="cat-card-img">
-            <img src="https://picsum.photos/seed/um1/400/220" alt="">
-            <span class="mini-badge badge-umburanas" style="position:absolute;bottom:8px;left:8px;">Umburanas</span>
-          </div>
-          <div class="cat-card-body">
-            <div class="cat-card-title">Festa de Santo Antônio começa neste sábado com programação religiosa</div>
-            <div class="cat-card-date"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>26 mai às 19:30</div>
-          </div>
-        </a>
-        <a href="#" class="cat-card">
-          <div class="cat-card-img">
-            <img src="https://picsum.photos/seed/um2/400/220" alt="">
-            <span class="mini-badge badge-umburanas" style="position:absolute;bottom:8px;left:8px;">Umburanas</span>
-          </div>
-          <div class="cat-card-body">
-            <div class="cat-card-title">Prefeitura inicia recuperação de estradas vicinais na zona rural</div>
-            <div class="cat-card-date"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>26 mai às 10:47</div>
-          </div>
-        </a>
-      </div>
+      <div class="cat-cards" id="cat-umburanas"><div class="loading">Carregando...</div></div>
     </div>
   </div>
 
-  <!-- LINHA 2: POLÍTICA + ESPORTES -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;">
-
-    <!-- POLÍTICA -->
+  <div class="cats-row" style="margin-top:24px;">
     <div class="cat-section" style="margin-top:0;">
       <div class="cat-header">
         <div class="cat-header-left">
-          <div class="cat-icon politica">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
+          <div class="cat-icon politica"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <span class="cat-title politica">Política</span>
         </div>
-        <a href="#" class="cat-link">Ver tudo →</a>
+        <a href="categoria.html?slug=politica&nome=Política" class="cat-link">Ver tudo →</a>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-        <a href="#" class="cat-card">
-          <div class="cat-card-img">
-            <img src="https://picsum.photos/seed/po1/400/220" alt="">
-            <span class="mini-badge badge-politica" style="position:absolute;bottom:8px;left:8px;">Política</span>
-          </div>
-          <div class="cat-card-body">
-            <div class="cat-card-title">Câmara de Jacobina aprova LDO 2027 com foco em transparência</div>
-            <div class="cat-card-date"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>26 mai às 20:55</div>
-          </div>
-        </a>
-        <a href="#" class="cat-card">
-          <div class="cat-card-img">
-            <img src="https://picsum.photos/seed/po2/400/220" alt="">
-            <span class="mini-badge badge-politica" style="position:absolute;bottom:8px;left:8px;">Política</span>
-          </div>
-          <div class="cat-card-body">
-            <div class="cat-card-title">Deputado defende pavimentação da BA-144 entre Capim Grosso e Várzea do Poço</div>
-            <div class="cat-card-date"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>26 mai às 17:40</div>
-          </div>
-        </a>
-      </div>
+      <div class="cat-cards" id="cat-politica"><div class="loading">Carregando...</div></div>
     </div>
-
-    <!-- ESPORTES -->
     <div class="cat-section" style="margin-top:0;">
       <div class="cat-header">
         <div class="cat-header-left">
-          <div class="cat-icon esportes">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M14.83 9.17l-3.6 3.6M4.93 19.07l4.24-4.24"/></svg>
-          </div>
+          <div class="cat-icon esportes"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M14.83 9.17l-3.6 3.6M4.93 19.07l4.24-4.24"/></svg></div>
           <span class="cat-title esportes">Esportes</span>
         </div>
-        <a href="#" class="cat-link">Ver tudo →</a>
+        <a href="categoria.html?slug=esporte&nome=Esportes" class="cat-link">Ver tudo →</a>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-        <a href="#" class="cat-card">
-          <div class="cat-card-img">
-            <img src="https://picsum.photos/seed/es1/400/220" alt="">
-            <span class="mini-badge badge-esportes" style="position:absolute;bottom:8px;left:8px;">Esportes</span>
-          </div>
-          <div class="cat-card-body">
-            <div class="cat-card-title">Dois de virada! Jacobina EC vence fora de casa e encosta no G4</div>
-            <div class="cat-card-date"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>26 mai às 21:48</div>
-          </div>
-        </a>
-        <a href="#" class="cat-card">
-          <div class="cat-card-img">
-            <img src="https://picsum.photos/seed/es2/400/220" alt="">
-            <span class="mini-badge badge-esportes" style="position:absolute;bottom:8px;left:8px;">Esportes</span>
-          </div>
-          <div class="cat-card-body">
-            <div class="cat-card-title">Atleta de Umburanas conquista 1º lugar na Corrida do Trabalhador em Feira</div>
-            <div class="cat-card-date"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>26 mai às 18:33</div>
-          </div>
-        </a>
-      </div>
+      <div class="cat-cards" id="cat-esportes"><div class="loading">Carregando...</div></div>
     </div>
   </div>
 
-  <!-- BANNER PUBLICIDADE -->
   <div class="ad-banner ad-banner-h" style="margin-top:28px;">
     <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-    <span>PUBLICIDADE</span>
-    <span class="ad-label">728 × 90</span>
+    <span>PUBLICIDADE</span><span class="ad-label">728 × 90</span>
   </div>
 
-  <!-- ===== ÚLTIMAS MATÉRIAS — SEÇÃO FINAL ===== -->
-  <div class="section-divider" style="margin-top:28px;"></div>
+  <div class="section-divider"></div>
   <div class="feed-section" style="margin-top:0;">
     <div class="two-col">
       <div>
-        <div class="feed-header">
-          <div class="feed-header-title">Últimas Matérias</div>
-        </div>
-        <div class="feed-list">
-          <a href="#" class="feed-item">
-            <div class="feed-thumb-wrap">
-              <img src="https://picsum.photos/seed/f1/300/200" alt="">
-              <span class="feed-badge badge-policia">Polícia</span>
-            </div>
-            <div class="feed-content">
-              <div class="feed-author">Por <span>Joselito Simplício</span> — maio 26, 2026</div>
-              <div class="feed-title">Suspeito de homicídio é preso com drogas e arma em Capim Grosso</div>
-              <div class="feed-excerpt">Polícia Militar da Bahia cumpriu mandado de prisão durante operação no bairro Cova da Onça.</div>
-              <div class="feed-time"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>09:35</div>
-            </div>
-          </a>
-          <a href="#" class="feed-item">
-            <div class="feed-thumb-wrap">
-              <img src="https://picsum.photos/seed/f2/300/200" alt="">
-              <span class="feed-badge badge-brasil">Brasil</span>
-            </div>
-            <div class="feed-content">
-              <div class="feed-author">Por <span>Joselito Simplício</span> — maio 26, 2026</div>
-              <div class="feed-title">Idoso vai a festa de penetra, é expulso e mata pai de aniversariante no meio da comemoração</div>
-              <div class="feed-excerpt">Pai estava comemorando aniversário da filha quando iniciou discussão que terminou em tragédia.</div>
-              <div class="feed-time"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>09:12</div>
-            </div>
-          </a>
-          <a href="#" class="feed-item">
-            <div class="feed-thumb-wrap">
-              <img src="https://picsum.photos/seed/f3/300/200" alt="">
-              <span class="feed-badge badge-esportes">Esportes</span>
-            </div>
-            <div class="feed-content">
-              <div class="feed-author">Por <span>Joselito Simplício</span> — maio 26, 2026</div>
-              <div class="feed-title">Heróis nos pênaltis: Marcão brilha e Fluminense de Alazão vai à final da Copa 13 de Junho</div>
-              <div class="feed-excerpt">Goleiro tricolor defendeu a cobrança decisiva da Juventus e garantiu classificação histórica.</div>
-              <div class="feed-time"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>08:50</div>
-            </div>
-          </a>
-          <a href="#" class="feed-item">
-            <div class="feed-thumb-wrap">
-              <img src="https://picsum.photos/seed/f4/300/200" alt="">
-              <span class="feed-badge badge-politica">Política</span>
-            </div>
-            <div class="feed-content">
-              <div class="feed-author">Por <span>Joselito Simplício</span> — maio 26, 2026</div>
-              <div class="feed-title">Câmara de Jacobina aprova projeto que incentiva o empreendedorismo jovem</div>
-              <div class="feed-excerpt">Proposta prevê capacitação e crédito facilitado para jovens entre 18 e 29 anos.</div>
-              <div class="feed-time"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>09:15</div>
-            </div>
-          </a>
-          <a href="#" class="feed-item">
-            <div class="feed-thumb-wrap">
-              <img src="https://picsum.photos/seed/f5/300/200" alt="">
-              <span class="feed-badge badge-regiao">Região</span>
-            </div>
-            <div class="feed-content">
-              <div class="feed-author">Por <span>Joselito Simplício</span> — maio 26, 2026</div>
-              <div class="feed-title">Colisão envolvendo três veículos é registrada no Bairro Nazaré em Jacobina</div>
-              <div class="feed-excerpt">Acidente mobilizou equipes do SAMU e agentes de trânsito na Avenida Centenário.</div>
-              <div class="feed-time"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>11:45</div>
-            </div>
-          </a>
-          <a href="#" class="feed-item">
-            <div class="feed-thumb-wrap">
-              <img src="https://picsum.photos/seed/f6/300/200" alt="">
-              <span class="feed-badge badge-regiao">Região</span>
-            </div>
-            <div class="feed-content">
-              <div class="feed-author">Por <span>Joselito Simplício</span> — maio 26, 2026</div>
-              <div class="feed-title">Comitiva de Ourolândia marca presença na 4ª Feira Agropecuária de Morro do Chapéu</div>
-              <div class="feed-excerpt">Lideranças políticas participaram do evento que reúne agricultores da Chapada Diamantina.</div>
-              <div class="feed-time"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>16:42</div>
-            </div>
-          </a>
-        </div>
-        <a href="#" class="ver-mais-noticias">VER MAIS NOTÍCIAS ›</a>
+        <div class="feed-header"><div class="feed-header-title">Últimas Matérias</div></div>
+        <div class="feed-list" id="feed-list"><div class="loading">Carregando notícias...</div></div>
+        <a href="#" class="ver-mais-noticias" id="btn-ver-mais">VER MAIS NOTÍCIAS ›</a>
       </div>
-
-      <!-- SIDEBAR -->
       <div>
         <div class="ad-banner ad-banner-v" style="margin-bottom:20px;">
           <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span>PUBLICIDADE</span>
-          <span class="ad-label">300 × 600</span>
+          <span>PUBLICIDADE</span><span class="ad-label">300 × 600</span>
         </div>
         <div class="sidebar-box">
           <div class="sidebar-title">Mais Lidas</div>
-          <div class="mais-lidas-list">
-            <a href="#" class="mais-lidas-item">
-              <div class="mais-lidas-num">1</div>
-              <div class="mais-lidas-content">
-                <div class="mais-lidas-title">Chuvas voltam ao Sertão e trazem esperança para agricultores</div>
-                <div class="mais-lidas-date">24 mai às 08:15</div>
-              </div>
-            </a>
-            <a href="#" class="mais-lidas-item">
-              <div class="mais-lidas-num">2</div>
-              <div class="mais-lidas-content">
-                <div class="mais-lidas-title">Polícia Civil desarticula quadrilha especializada em roubos de cargas</div>
-                <div class="mais-lidas-date">23 mai às 17:45</div>
-              </div>
-            </a>
-            <a href="#" class="mais-lidas-item">
-              <div class="mais-lidas-num">3</div>
-              <div class="mais-lidas-content">
-                <div class="mais-lidas-title">Hospital Regional amplia atendimentos com nova ala de emergência</div>
-                <div class="mais-lidas-date">24 mai às 07:30</div>
-              </div>
-            </a>
-          </div>
-          <a href="#" class="ver-todas-link">Ver Todas as Mais Lidas →</a>
+          <div class="mais-lidas-list" id="mais-lidas-2"><div class="loading">Carregando...</div></div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div>
@@ -689,49 +316,246 @@ footer{background:var(--navy);color:#fff;margin-top:40px;padding:40px 0 0;}
         <a href="#"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Editorias</h4>
-      <ul>
-        <li><a href="#">Política</a></li>
-        <li><a href="#">Esportes</a></li>
-        <li><a href="#">Brasil</a></li>
-        <li><a href="#">Polícia</a></li>
-        <li><a href="#">Saúde</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Municípios</h4>
-      <ul>
-        <li><a href="#">Ourolândia</a></li>
-        <li><a href="#">Umburanas</a></li>
-        <li><a href="#">Jacobina</a></li>
-        <li><a href="#">Capim Grosso</a></li>
-        <li><a href="#">Região</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Institucional</h4>
-      <ul>
-        <li><a href="#">Quem Somos</a></li>
-        <li><a href="#">Fale Conosco</a></li>
-        <li><a href="#">Política de Privacidade</a></li>
-        <li><a href="#">Anuncie Conosco</a></li>
-        <li><a href="#">Trabalhe Conosco</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contato</h4>
-      <ul>
-        <li><a href="#">📱 (74) 99814-7717</a></li>
-        <li><a href="#">✉️ contato@sertaolivre.com.br</a></li>
-        <li><a href="#">📍 Ourolândia — BA</a></li>
-      </ul>
-    </div>
+    <div class="footer-col"><h4>Editorias</h4><ul><li><a href="#">Política</a></li><li><a href="#">Esportes</a></li><li><a href="#">Brasil</a></li><li><a href="#">Polícia</a></li><li><a href="#">Saúde</a></li></ul></div>
+    <div class="footer-col"><h4>Municípios</h4><ul><li><a href="#">Ourolândia</a></li><li><a href="#">Umburanas</a></li><li><a href="#">Jacobina</a></li><li><a href="#">Capim Grosso</a></li><li><a href="#">Região</a></li></ul></div>
+    <div class="footer-col"><h4>Institucional</h4><ul><li><a href="#">Quem Somos</a></li><li><a href="#">Fale Conosco</a></li><li><a href="#">Política de Privacidade</a></li><li><a href="#">Anuncie Conosco</a></li></ul></div>
+    <div class="footer-col"><h4>Contato</h4><ul><li><a href="#">📱 (74) 99814-7717</a></li><li><a href="#">✉️ contato@sertaolivre.com.br</a></li><li><a href="#">📍 Ourolândia — BA</a></li></ul></div>
   </div>
-  <div class="footer-bottom">
-    © 2026 Sertão Livre — Todos os direitos reservados. CNPJ 27.340.092/0001-05
-  </div>
+  <div class="footer-bottom">© 2026 Sertão Livre — Todos os direitos reservados. CNPJ 27.340.092/0001-05</div>
 </footer>
 
+<script>
+const API = 'https://sertaolivre.com.br/wp-json/wp/v2';
+let paginaAtual = 1;
+let carregandoMais = false;
+
+// Data de hoje
+const dias = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+const meses = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const hoje = new Date();
+document.getElementById('data-hoje').textContent = `${dias[hoje.getDay()]}, ${hoje.getDate()} de ${meses[hoje.getMonth()]} de ${hoje.getFullYear()}`;
+
+// Formatar data
+function formatarData(dateStr) {
+  const d = new Date(dateStr);
+  return `${d.getDate()} de ${meses[d.getMonth()]} às ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+}
+
+function formatarDataCurta(dateStr) {
+  const d = new Date(dateStr);
+  return `${d.getDate()} ${meses[d.getMonth()].substring(0,3)} às ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+}
+
+// Pegar imagem destacada
+function getImagem(post) {
+  if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
+    const media = post._embedded['wp:featuredmedia'][0];
+    if (media.media_details && media.media_details.sizes) {
+      return media.media_details.sizes.medium_large?.source_url || 
+             media.media_details.sizes.large?.source_url || 
+             media.media_details.sizes.medium?.source_url || 
+             media.source_url;
+    }
+    return media.source_url;
+  }
+  return 'https://via.placeholder.com/800x400/1E3A8A/ffffff?text=Sertão+Livre';
+}
+
+// Pegar categoria principal
+function getCategoria(post) {
+  if (post._embedded && post._embedded['wp:term'] && post._embedded['wp:term'][0]) {
+    const cats = post._embedded['wp:term'][0];
+    if (cats.length > 0) return cats[0];
+  }
+  return {name: 'Notícias', slug: 'noticias'};
+}
+
+function getBadgeClass(slug) {
+  const map = {
+    'esporte': 'badge-esportes', 'esportes': 'badge-esportes',
+    'politica': 'badge-politica', 'política': 'badge-politica',
+    'policia': 'badge-policia', 'polícia': 'badge-policia',
+    'brasil': 'badge-brasil',
+    'ourolandia': 'badge-ourolandia', 'ourolândia': 'badge-ourolandia',
+    'umburanas': 'badge-umburanas',
+    'regiao': 'badge-regiao', 'região': 'badge-regiao',
+  };
+  return map[slug] || 'badge-default';
+}
+
+// Carregar posts gerais
+async function carregarPosts() {
+  try {
+    const res = await fetch(`${API}/posts?per_page=10&page=${paginaAtual}&_embed`);
+    const posts = await res.json();
+    return posts;
+  } catch(e) {
+    console.error('Erro ao carregar posts:', e);
+    return [];
+  }
+}
+
+// Renderizar hero
+function renderHero(post) {
+  const img = getImagem(post);
+  const cat = getCategoria(post);
+  const titulo = post.title.rendered.replace(/<[^>]*>/g,'');
+  const excerpt = post.excerpt.rendered.replace(/<[^>]*>/g,'').substring(0,120) + '...';
+  
+  document.getElementById('hero-section').innerHTML = `
+    <a href="noticia.html?id=${post.id}">
+      <img class="hero-img" src="${img}" alt="${titulo}" onerror="this.src='https://via.placeholder.com/900x420/1E3A8A/ffffff?text=Sertão+Livre'">
+      <div class="hero-overlay">
+        <span class="hero-badge">${cat.name}</span>
+        <h1 class="hero-title">${titulo}</h1>
+        <div class="hero-meta">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          ${formatarData(post.date)}
+        </div>
+      </div>
+    </a>`;
+}
+
+// Renderizar mini cards
+function renderMiniCards(posts) {
+  document.getElementById('mini-cards').innerHTML = posts.slice(1,4).map(post => {
+    const img = getImagem(post);
+    const cat = getCategoria(post);
+    const titulo = post.title.rendered.replace(/<[^>]*>/g,'');
+    return `
+      <a href="noticia.html?id=${post.id}" class="mini-card">
+        <div class="mini-card-img">
+          <img src="${img}" alt="${titulo}" onerror="this.src='https://via.placeholder.com/400x200/1E3A8A/ffffff?text=Sertão+Livre'">
+          <span class="mini-badge ${getBadgeClass(cat.slug)}">${cat.name}</span>
+        </div>
+        <div class="mini-card-body">
+          <div class="mini-card-title">${titulo}</div>
+          <div class="mini-card-date">${formatarDataCurta(post.date)}</div>
+        </div>
+      </a>`;
+  }).join('');
+}
+
+// Renderizar mais lidas
+function renderMaisLidas(posts, elementId) {
+  const el = document.getElementById(elementId);
+  if(!el) return;
+  el.innerHTML = posts.slice(0,5).map((post, i) => {
+    const titulo = post.title.rendered.replace(/<[^>]*>/g,'');
+    return `
+      <a href="noticia.html?id=${post.id}" class="mais-lidas-item">
+        <div class="mais-lidas-num">${i+1}</div>
+        <div>
+          <div class="mais-lidas-title">${titulo}</div>
+          <div class="mais-lidas-date">${formatarDataCurta(post.date)}</div>
+        </div>
+      </a>`;
+  }).join('');
+}
+
+// Renderizar ticker
+function renderTicker(posts) {
+  const textos = posts.map(p => `🔴 ${p.title.rendered.replace(/<[^>]*>/g,'')}`).join(' &nbsp;&nbsp;•&nbsp;&nbsp; ');
+  document.getElementById('ticker-text').innerHTML = textos + ' &nbsp;&nbsp;•&nbsp;&nbsp; ' + textos;
+}
+
+// Renderizar feed
+function renderFeed(posts, append = false) {
+  const feedEl = document.getElementById('feed-list');
+  const html = posts.map(post => {
+    const img = getImagem(post);
+    const cat = getCategoria(post);
+    const titulo = post.title.rendered.replace(/<[^>]*>/g,'');
+    const excerpt = post.excerpt.rendered.replace(/<[^>]*>/g,'').substring(0,120) + '...';
+    return `
+      <a href="noticia.html?id=${post.id}" class="feed-item">
+        <div class="feed-thumb-wrap">
+          <img src="${img}" alt="${titulo}" onerror="this.src='https://via.placeholder.com/200x130/1E3A8A/ffffff?text=SL'">
+          <span class="feed-badge ${getBadgeClass(cat.slug)}">${cat.name}</span>
+        </div>
+        <div class="feed-content">
+          <div class="feed-author">Por <span>Joselito Simplício</span> — ${formatarDataCurta(post.date)}</div>
+          <div class="feed-title">${titulo}</div>
+          <div class="feed-excerpt">${excerpt}</div>
+        </div>
+      </a>`;
+  }).join('');
+  
+  if (append) feedEl.innerHTML += html;
+  else feedEl.innerHTML = html;
+}
+
+// Carregar posts por categoria
+async function carregarCategoria(slug, elementId) {
+  try {
+    // Primeiro buscar ID da categoria pelo slug
+    const rescat = await fetch(`${API}/categories?slug=${slug}&per_page=5`);
+    const cats = await rescat.json();
+    if (!cats.length) { document.getElementById(elementId).innerHTML = '<p style="padding:16px;color:var(--gray);font-size:13px;">Nenhuma notícia encontrada.</p>'; return; }
+    
+    const catId = cats[0].id;
+    const res = await fetch(`${API}/posts?categories=${catId}&per_page=2&_embed`);
+    const posts = await res.json();
+    
+    if (!posts.length) { document.getElementById(elementId).innerHTML = '<p style="padding:16px;color:var(--gray);font-size:13px;">Nenhuma notícia encontrada.</p>'; return; }
+    
+    document.getElementById(elementId).innerHTML = posts.map(post => {
+      const img = getImagem(post);
+      const cat = getCategoria(post);
+      const titulo = post.title.rendered.replace(/<[^>]*>/g,'');
+      return `
+        <a href="noticia.html?id=${post.id}" class="cat-card">
+          <div class="cat-card-img">
+            <img src="${img}" alt="${titulo}" onerror="this.src='https://via.placeholder.com/400x200/1E3A8A/ffffff?text=SL'">
+            <span class="mini-badge ${getBadgeClass(slug)}" style="position:absolute;bottom:8px;left:8px;">${cat.name}</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-card-title">${titulo}</div>
+            <div class="cat-card-date">${formatarDataCurta(post.date)}</div>
+          </div>
+        </a>`;
+    }).join('');
+  } catch(e) {
+    document.getElementById(elementId).innerHTML = '<p style="padding:16px;color:var(--gray);font-size:13px;">Erro ao carregar.</p>';
+  }
+}
+
+// Ver mais notícias
+document.getElementById('btn-ver-mais').addEventListener('click', async (e) => {
+  e.preventDefault();
+  if (carregandoMais) return;
+  carregandoMais = true;
+  paginaAtual++;
+  e.target.textContent = 'Carregando...';
+  try {
+    const res = await fetch(`${API}/posts?per_page=6&page=${paginaAtual}&_embed`);
+    const posts = await res.json();
+    if (posts.length) renderFeed(posts, true);
+    else e.target.textContent = 'Não há mais notícias';
+  } catch(e2) { paginaAtual--; }
+  e.target.textContent = 'VER MAIS NOTÍCIAS ›';
+  carregandoMais = false;
+});
+
+// Inicializar tudo
+async function init() {
+  const posts = await carregarPosts();
+  if (posts.length) {
+    renderHero(posts[0]);
+    renderMiniCards(posts);
+    renderTicker(posts);
+    renderMaisLidas(posts, 'mais-lidas');
+    renderMaisLidas(posts, 'mais-lidas-2');
+    renderFeed(posts.slice(4));
+  }
+  // Carregar categorias em paralelo
+  carregarCategoria('ourolandia', 'cat-ourolandia');
+  carregarCategoria('umburanas', 'cat-umburanas');
+  carregarCategoria('politica', 'cat-politica');
+  carregarCategoria('esporte', 'cat-esportes');
+}
+
+init();
+</script>
 </body>
 </html>
