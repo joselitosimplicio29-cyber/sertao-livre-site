@@ -87,18 +87,19 @@ nav{background:#fff;border-top:1px solid var(--border);}
 .feed-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:3px solid var(--gold);}
 .feed-header-title{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);}
 .feed-list{display:flex;flex-direction:column;}
-.feed-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s;}
-.feed-item:hover{background:#F8F9FA;margin:0 -12px;padding:16px 12px;}
+.feed-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s;}
+.feed-item:hover{background:#F8F9FA;margin:0 -12px;padding:20px 12px;}
 .feed-item:last-child{border-bottom:none;}
-.feed-thumb-wrap{position:relative;flex-shrink:0;background:#ddd;border-radius:6px;overflow:hidden;}
-.feed-thumb-wrap img{width:200px;height:130px;object-fit:cover;border-radius:6px;}
-.feed-badge{position:absolute;bottom:8px;left:8px;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:3px;color:#fff;}
-.feed-content{flex:1;}
-.feed-author{font-size:11px;color:var(--gray);margin-bottom:5px;}
-.feed-author span{color:var(--navy);font-weight:600;}
-.feed-title{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.4;color:var(--dark);margin-bottom:7px;}
-.feed-excerpt{font-size:13px;color:var(--gray);line-height:1.5;margin-bottom:8px;}
-.feed-time{font-size:11px;color:var(--gray);display:flex;align-items:center;gap:4px;}
+.feed-thumb-wrap{position:relative;flex-shrink:0;background:#ddd;border-radius:8px;overflow:hidden;}
+.feed-thumb-wrap img{width:280px;height:180px;object-fit:cover;border-radius:8px;transition:.3s;}
+.feed-item:hover .feed-thumb-wrap img{transform:scale(1.03);}
+.feed-badge{position:absolute;bottom:10px;left:10px;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:4px 10px;border-radius:3px;color:#fff;}
+.feed-content{flex:1;display:flex;flex-direction:column;justify-content:center;}
+.feed-author{font-size:12px;color:var(--gray);margin-bottom:8px;}
+.feed-author span{color:var(--navy);font-weight:700;}
+.feed-title{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;line-height:1.4;color:var(--dark);margin-bottom:10px;}
+.feed-excerpt{font-size:14px;color:var(--gray);line-height:1.6;margin-bottom:10px;}
+.feed-time{font-size:12px;color:var(--gray);display:flex;align-items:center;gap:4px;}
 .ver-mais-noticias{display:block;background:var(--navy);color:#fff;text-align:center;padding:14px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;margin-top:20px;transition:.2s;}
 .ver-mais-noticias:hover{background:#162d6e;}
 .cat-section{margin-top:28px;}
@@ -474,7 +475,7 @@ function renderFeed(posts, append = false) {
           <span class="feed-badge ${getBadgeClass(cat.slug)}">${cat.name}</span>
         </div>
         <div class="feed-content">
-          <div class="feed-author">Por <span>Joselito Simplício</span> — ${formatarDataCurta(post.date)}</div>
+          <div class="feed-author"><span>Redação</span> — ${formatarDataCurta(post.date)}</div>
           <div class="feed-title">${titulo}</div>
           <div class="feed-excerpt">${excerpt}</div>
         </div>
